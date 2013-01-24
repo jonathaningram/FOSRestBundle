@@ -39,6 +39,9 @@ fos_rest:
             # Prototype
             name:                 []
         view_response_listener:  false
+        jsonp_handler:
+            callback_param:       callback
+            callback_filter:      /(^[a-z0-9_]+$)|(^YUI\.Env\.JSONP\._[0-9]+$)/i
         failed_validation:       400
         empty_content:           204
         serialize_null:          false

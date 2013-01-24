@@ -137,6 +137,8 @@ class Configuration implements ConfigurationInterface
                                 ->scalarNode('callback_filter')->defaultValue('/(^[a-z0-9_]+$)|(^YUI\.Env\.JSONP\._[0-9]+$)/i')->end()
                             ->end()
                         ->end()
+                        ->scalarNode('empty_content')->defaultValue(Codes::HTTP_NO_CONTENT)->end()
+                        ->booleanNode('serialize_null')->defaultFalse()->end()
                     ->end()
                 ->end()
             ->end();
